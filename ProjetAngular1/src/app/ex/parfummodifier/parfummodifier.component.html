@@ -1,0 +1,48 @@
+<div class="container">
+    <h3>Modifier un parfum</h3>
+    <form>
+        <div class="form-group">
+            <label for="nom" id="nom"> changer le nom : </label>
+            <input class="form-control form-control-sm" type="text" [(ngModel)]="currentParfum.nom" #nom="ngModel" name="nom" required> <br>
+        </div>
+        <div class="form-group">
+        <label for="prix" id="prix"> Donnez le nouveau prix du parfum</label>
+        <input class="form-control form-control-sm" type="text" [(ngModel)]="currentParfum.prix" #prix="ngModel" name="prix" required> <br>
+        </div>
+        <div class="form-group">
+            <label for="dats" id="dats"> modifier la date de sortie</label>
+            <input class="form-control form-control-sm" type="date" [(ngModel)]="currentParfum.dats" #dats="ngModel" name="dats" required> <br>
+        </div>
+        <div class="form-group">
+            <label for="photo" id="photo"> modifier le lien de l'image</label>
+            <input class="form-control form-control-sm" type="text" [(ngModel)]="currentParfum.photo" #photo="ngModel" name="photo" required> <br>
+        </div>
+        <div class="form-group">
+            <label for="enstock" id="enstock"> Modifier Existe en stock ?</label>
+            <div class="form-group form-check">
+                <input type="checkbox" [(ngModel)]="currentParfum.enstock" #enstock="ngModel" name="enstock" required id="enstock" class="form-check-input" /> <label>Oui</label>
+            </div>
+            <!--label for="enstock" id="enstock"> modifier le stockage du parfum </label>
+            <select class="form-control form-control-sm"[(ngModel)]="currentParfum.enstock" #enstock="ngModel" name="enstock" required>
+                <option *ngFor="let c of choix" value="{{c}}">{{c}}</option>
+              </select-->           
+         </div>
+        <div class="form-group">
+            <label for="categorie" id="categorie"> modifier la categorie</label>
+            <input class="form-control form-control-sm" type="text" [(ngModel)]="currentParfum.categorie" #categorie="ngModel" name="categorie" required> <br>
+        </div>
+            <div class="form-group">
+                <label for="typeparfum" id="typeparfum"> modifier le type de parfum</label>
+                <input class="form-control form-control-sm" type="text" [(ngModel)]="currentParfum.typeparfum" #typeparfum="ngModel" name="typeparfum" required> <br>
+            </div>
+        <div class="form-group">
+        <label for="marque" id="marque">Marque : </label>
+        <input type="text" class="form-control form-control-sm"  [(ngModel)]="currentParfum.marque" #marque="ngModel" name="marque" required>
+        </div>
+        <hr>
+        <button class= "btn btn-success d" (click)="onModifier()" >Modifer un parfum </button>
+        <button type="button" class="btn btn-info" style="margin-left: 5px;"  (click)="onListeParfum()">Retour</button>
+
+    </form>
+
+</div> 

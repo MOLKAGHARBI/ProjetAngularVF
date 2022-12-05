@@ -1,0 +1,17 @@
+{
+  "Client": [
+    {
+      "nom": "",
+      "prenom": "",
+      "datedenais": "",
+      "tel": "",
+      "ville": "",
+      "motdepasse": "",
+      "mail": "",
+      "sexe": "",
+      "id": 1
+    }
+   
+   
+  ]
+}

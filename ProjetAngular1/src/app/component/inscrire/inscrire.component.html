@@ -1,0 +1,54 @@
+<div class="container">
+    <h3> Fiche d'inscription</h3>
+    <form [formGroup]="inscrireForm">
+        <div>
+            <label> Nom </label>
+            <input class="form-control" type="text" formControlName="nom" [disabled]="inscrireForm.invalid">
+        </div>
+        <div>
+            <label>Prenom </label>
+            <input class="form-control" type="text" formControlName="prenom" [disabled]="inscrireForm.invalid">
+        </div>
+        <div>
+            <label>Date De Naissance</label>
+            <input class="form-control" type="date" formControlName="datedenais">
+        </div>
+         <div>
+            <label> sexe</label> <br/>
+            <input type="radio" formControlName="sexe" value="Femme"> femme
+            <input type="radio" formControlName="sexe" value="homme"> homme
+
+         </div>
+        <div>
+            <label> Telephone </label>
+            <input class="form-control" type="text" formControlName="tel">
+        </div>
+        
+        <div>
+            <label>   ville </label>
+            <select class="form-select" formControlName="ville">
+                <option *ngFor="let t of lesVilles" [value]="t">  {{t}} </option>
+            
+            </select>
+            </div>
+           <div>
+            <label> E-mail </label>
+            <input class="form-control" type="mail" formControlName="mail">
+        </div>
+        <div>
+            <label> Mot de passe</label>
+            <input class="form-control" type="password" formControlName="motdepasse" [disabled]="inscrireForm.invalid">
+        </div>
+        <!--div>
+            <label> Confirmer mot de passe</label>
+            <input class="form-control" type="text" formControlName="motdepasse">
+        </div-->
+        <br/>
+        <div>
+            <button  type="submit"   class="btn btn-outline-success m " (click)="addClient()" >  creer votre compte  </button> 
+            <button  type="reset"   class="btn btn-outline-dark " (click)="onReset()">  reinisialier  </button>
+         </div>
+        
+   </form>
+</div>
+

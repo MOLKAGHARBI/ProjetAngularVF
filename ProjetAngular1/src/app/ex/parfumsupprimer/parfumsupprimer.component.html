@@ -1,0 +1,7 @@
+<h3> supprimer un parfum </h3>
+<ul>
+<li *ngFor= "let p of sp">
+Id: {{p.id}} - {{p.nom}} - Prix: {{p.prix}}
+<button type="button" class="btn btnlink" (click)="onSupprimer(p.id)">supprimer</button>
+</li>
+</ul>

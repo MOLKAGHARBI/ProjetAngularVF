@@ -1,0 +1,38 @@
+<div class="back">
+<div class="divg" >
+<h2 class="title" style="padding-left : 22px ; color: black" > Nos parfums</h2>
+
+<div  class=" row" style="margin-bottom:3px">
+<ul class="gdiv list-group list-group-horizontal">
+<li *ngFor="let p of lesParfums$ |async" class="col-sm-3">
+<div class="card box image" style="width : 18rem">
+    <img [src]="p.photo" class="card-img-top p-2" height="250px" width="900px" />
+<h4  class="card-title v"> {{p.nom }}</h4>
+<p class="card-title"> Prix:{{ p.prix| currency }} </p> 
+<span class="badge text-bg-warning m-4" ></span>
+
+<!-- <button  type="button" class=" btn btn-info btn-sm container" [routerLink] = "['/nosparfum',p.id]"> Details</button> -->
+<button input type="button" value="Supprimer" class="btn btn-success"  (click)="onSupprimer(p.id)"> Supprimer</button>
+<button input type="button" value="modifier" class="btn btn-warning" [routerLink]="['/parfummodifier', p.id]"> Modifier</button> 
+
+</div>
+</li>
+</ul>
+</div>
+</div> <br/>
+<span><button type="button" class=" btn btn-dark p" routerLink="/parfumajouter"> Ajouter un parfum </button>
+   
+
+    
+       
+
+</span>
+</div>
+
+
+
+
+
+
+
+

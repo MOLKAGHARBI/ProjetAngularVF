@@ -1,0 +1,21 @@
+<app-menu></app-menu>
+<div class="granddiv">
+
+    <div  class="row" style="margin-bottom:3px " style="margin-left:600px"  >
+    <ul class="gdiv list-group list-group-horizontal">
+    <li  class="col-sm-s">
+    <div class="card box image" style="width : 18rem">
+        <img [src]="select.photo" class="card-img-top p-2" height="250px" width="900px" />
+    <h4  class="card-title v"> {{select.nom}}</h4>
+    <p class="card-title v"> Prix:{{ select.prix | number :"0.3" }} </p>
+    <p class="card-title v"> Marque:{{ select.marque  }} </p>
+    <p class="card-title v"> Categorie:{{ select.categorie }} </p>
+    <p class="card-title v"> Date de creation:{{ select. dats}} </p>
+   <div class="card-title v">  en stock <input  type="checkbox" [checked]="select.enstock"> </div>
+    <span class="badge text-bg-success m-4" >Ajouter au panier</span>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <br/>

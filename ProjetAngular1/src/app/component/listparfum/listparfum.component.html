@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<div class="back">
+<div class="divg" >
+    <h2 class="title" style="padding-left : 22px ; color: black" > Liste des parfums</h2>
+    
+    <div  class=" row" style="margin-bottom:3px">
+    <ul class="gdiv list-group list-group-horizontal">
+    <li *ngFor="let p of lesParfums$ |async" class="col-sm-3">
+    <div class="card box image" style="width : 18rem">
+        <img [src]="p.photo" class="card-img-top p-2" height="250px" width="900px" />
+    <h4  class="card-title v"> {{p.nom |nomsm }}</h4>
+    <p class="card-title"> Prix:{{ p.prix | currency }} </p>
+    <span class="badge text-bg-warning m-4" ></span>
+    <span class="btn btn-success btn-sm m-4" (click)="oncommander()" > Commander</span>
+    <button  type="button" class=" btn btn-info btn-sm container" [routerLink] = "['/listparfum',p.id]"> Details</button>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </div> <br/>
+    </div>
+    

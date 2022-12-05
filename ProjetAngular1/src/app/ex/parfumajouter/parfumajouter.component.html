@@ -1,0 +1,33 @@
+<div class="container">
+    <h3>Ajouter un parfum</h3>
+    <form [formGroup]=" parfumForm" >
+        <label> Donnez le nom du parfum</label>
+        <input class="form-control" type="text" formControlName="nom"> <br>
+        <label> Donnez le lien d'image du parfum</label>
+        <input class="form-control" type="text" formControlName="photo"> <br>
+        <label> Donnez le prix du parfum</label>
+        <input class="form-control"  type="number" formControlName="prix">
+        <label> Existe en stock ?</label>
+        <div class="form-group form-check">
+            <input type="checkbox" formControlName="enstock" id="enstock" class="form-check-input" /> <label>Oui</label>
+        </div>
+        <!--select class="form-control" formControlName="enstock">
+            <option *ngFor="let c of Choix" value={{c}}>{{c}}</option>
+        </select--> 
+        <label> Date de sortie</label>
+        <input class="form-control" type="Date" formControlName="dats"> <br>
+        <label> Donnez la categorie du parfum</label>
+        <input class="form-control" type="text" formControlName="categorie"> <br>
+        <label> Donnez le type du parfum</label>
+        <input class="form-control" type="text" formControlName="typeparfum"> <br>
+        <label> Donnez la marque</label>
+        <input class="form-control" type="text" formControlName="marque"> <br> 
+        <hr>
+        <button class= "btn btn-success d" (click)="addParfum()">Ajouter Parfum</button>
+        <button type="button" class="btn btn-info" style="margin-left: 5px;" (click)="onListeParfum()">Retour</button>
+    </form>
+
+
+</div>
+
+

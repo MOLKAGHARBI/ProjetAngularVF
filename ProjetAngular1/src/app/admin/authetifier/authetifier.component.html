@@ -1,0 +1,24 @@
+<div class="container" style="margin-top: 1%;">
+    <h3>Athentification au site </h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
+            
+        <div *ngIf="message" class="alert alert-danger text-center error"> {{message}}</div><br>
+        <div class="form-group clearfix" [ngClass]="{ 'has-error':submitted && f['login'].errors }">
+        <label> Donnez  votre login : </label>
+        <input class="form-control" type="text" formControlName="login">
+        <div *ngIf="submitted && f['login'].errors" class="help-block" style="color:red;">
+            <div *ngIf="f['login'].errors['required']">Login is required</div>
+      </div>
+    </div><br>
+    <div class="form-group clearfix" [ngClass]="{ 'has-error': submitted && f['pwd'].errors }">
+        <label> Donnez votre mot de passe : </label>
+        <input class="form-control"  type="password" formControlName="pwd" name="pwd">
+        <div *ngIf="submitted && f['pwd'].errors" style="color:red;" class="help-block">
+            <div *ngIf="f['pwd'].errors['required']">Password is required</div>
+      </div>
+      </div>
+      <br>
+        <button class= "btn btn-success m">connecter</button>
+    </form>
+
+</div>

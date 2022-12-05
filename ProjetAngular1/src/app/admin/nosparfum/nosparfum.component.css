@@ -1,0 +1,28 @@
+h1{ 
+    color: rgb(144, 19, 63);
+    text-align: center;
+}
+h2{ font-style: italic;
+text-align: center;
+margin-top: 30px;}
+.v{ text-align: center;}
+.m{ margin-left: 200px;}
+ul li { list-style-type: none;}
+.divg{ height: max-content;}
+.gdiv{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.box{
+    margin: 10px;
+}
+.btn-info{ background-color: rgb(121, 186, 211); border-color: rgb(121, 186, 211); }
+.btn-success{ background-color: rgb(3, 0, 0); border-color: rgb(3, 0, 0); }
+.btn-warning{  background-color:rgb(238, 208, 230); border-color: rgb(238, 208, 230); }
+
+.p {
+    margin-left: 700px;
+}
+.back{
+    background-image: url('fond22.jpg'); height: 100%;  width:100%; margin-left: 70px; }

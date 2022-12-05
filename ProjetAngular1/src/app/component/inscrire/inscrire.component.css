@@ -1,0 +1,7 @@
+
+
+
+h3{ font-style:italic;}
+.m { margin-left:500px;}
+input.ng-valid{ border-left: 3px solid green;}
+input.ng-invalid{ border-left: 3px solid red;}
